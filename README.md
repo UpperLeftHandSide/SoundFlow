@@ -90,10 +90,10 @@ var player = new SoundPlayer(engine, device.Format,
 
 // 5. Add the player to the device's MasterMixer.
 // Each device has its own independent mixer.
-device.MasterMixer.AddComponent(player);
+playbackDevice.MasterMixer.AddComponent(player);
 
 // 6. Start the device to begin audio processing.
-device.Start();
+playbackDevice.Start();
 player.Play();
 
 // Keep the console application running.
@@ -102,7 +102,7 @@ Console.ReadKey();
 
 // Stop and clean up.
 player.Stop();
-device.Stop();
+playbackDevice.Stop();
 ```
 
 ## Core Concepts
